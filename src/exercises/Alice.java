@@ -9,16 +9,17 @@ public class Alice {
 
         Scanner input = new Scanner(System.in);
         System.out.println("What term should I search for within the first sentence of Alice in Wonderland?");
-        String userSelectedTerm = input.next().toLowerCase();
+        String userSelectedTerm = input.nextLine().toLowerCase();
         input.close();
 
         if(lowerCaseSentence.contains(userSelectedTerm)){
-            //for(int i = 0; i < lowerCaseSentence.length(); i++){
-                System.out.println("index of term is: " + lowerCaseSentence.indexOf(userSelectedTerm));
-                System.out.println("length of term is: " + userSelectedTerm.length());
+            int i = lowerCaseSentence.indexOf(userSelectedTerm);
+            while(i >= 0){
+                System.out.println("index of term is: " + i);
+                i = lowerCaseSentence.indexOf(userSelectedTerm, i+1);
+            }
 
-            //}
-
+            System.out.println("length of term is: " + userSelectedTerm.length());
             String transformedSentence = lowerCaseSentence.replace(userSelectedTerm, "");
             System.out.println("new sentence with term removed is: " + transformedSentence);
         } else {
