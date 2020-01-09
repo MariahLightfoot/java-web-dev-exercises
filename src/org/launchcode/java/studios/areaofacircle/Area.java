@@ -8,9 +8,10 @@ public class Area {
         System.out.println("What is the radius of the circle?");
         double userRadius = radius.nextDouble();
 
-        if(userRadius < 0){
-            System.out.println("Only numeric values can be entered!");
-            System.exit(0);
+        while(userRadius < 0){
+            System.out.println("Only positive numbers can be entered!");
+            System.out.println("What is the radius of the circle?");
+            userRadius = radius.nextDouble();
         }
 
         double area = Circle.getArea(userRadius);
