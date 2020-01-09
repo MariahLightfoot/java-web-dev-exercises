@@ -8,7 +8,7 @@ public class Area {
         System.out.println("What is the radius of the circle?");
         double userRadius = radius.nextInt();
 
-        double area = Math.PI * userRadius * userRadius;
+        double area = Circle.getArea(userRadius);
         System.out.println("The area of the circle is " + area);
     }
 }
