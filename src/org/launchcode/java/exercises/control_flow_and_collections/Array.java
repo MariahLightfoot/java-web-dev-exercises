@@ -15,7 +15,9 @@ public class Array {
 
         //looping through values array
         for (int i=0; i<6; i++){
-            System.out.println(values[i]);
+            if(values[i] % 2 == 1){
+                System.out.println(values[i]);
+            }
         }
 
         //why doesn't values print like this?
