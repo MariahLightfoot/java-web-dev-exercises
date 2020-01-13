@@ -1,7 +1,10 @@
 package org.launchcode.java.exercises.control_flow_and_collections;
 
+import java.util.Arrays;
+
 public class Array {
     public static void main(String[] args) {
+        //first part of 3.7.1 Array Practice
         //declares array and allocates 7 spaces for memory
         int[] values = new int[6];
 
@@ -20,8 +23,12 @@ public class Array {
             }
         }
 
-        //why doesn't values print like this?
-        //System.out.println(values);
+        //second part of 3.7.1 Array Practice
+        //declaring an string, using split to store each word in an array
+        String phrase = "I would not, could not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
+        String[] wordsFromPhrase = phrase.split(" ");
+
+        System.out.println(Arrays.toString(wordsFromPhrase));
 
     }
 }
