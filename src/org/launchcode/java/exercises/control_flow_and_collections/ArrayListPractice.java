@@ -23,11 +23,31 @@ public class ArrayListPractice {
             }
         }
 
-        System.out.println(sum);
+        System.out.println("The sum of the numbers is: " + sum);
+        System.out.println("\n");
 
         //second part of 3/7/2 ArrayList Practice
-        String phrase = "I would not, could not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
-        ArrayList<String> letters = new ArrayList<String>(Arrays.asList(phrase.split(" ")));
-        System.out.println(letters);
+        ArrayList<String> words = new ArrayList<>();
+        words.add("doggo");
+        words.add("kitty");
+        words.add("squirrel");
+        words.add("bunny");
+        words.add("mouse");
+        words.add("bee");
+        words.add("hamster");
+        words.add("snake");
+
+        Scanner length = new Scanner (System.in);
+        System.out.println("What word length do you want to use for the search?");
+        int userSelectedLength = length.nextInt();
+
+        System.out.println("The words that match that length are: ");
+        for(String word : words){
+            ArrayList<String> lengthCheck = new ArrayList<String>(Arrays.asList(word.split("")));
+
+            if(lengthCheck.size() == userSelectedLength){
+                System.out.println(word);
+            }
+        }
     }
 }
