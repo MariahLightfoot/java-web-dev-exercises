@@ -2,7 +2,7 @@ package org.launchcode.java.exercises.control_flow_and_collections;
 
 import java.util.Arrays;
 
-public class Array {
+public class ArrayPractice {
     public static void main(String[] args) {
         //first part of 3.7.1 Array Practice
         //declares array and allocates 7 spaces for memory
