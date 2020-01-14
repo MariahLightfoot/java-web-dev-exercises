@@ -17,15 +17,17 @@ public class ArrayPractice {
         values[5] = 8;
 
         //looping through values array
+        System.out.println("The odd values present in the array are:");
         for (int i=0; i<6; i++){
             if(values[i] % 2 == 1){
                 System.out.println(values[i]);
             }
         }
+        System.out.println("\n");
 
         //second part of 3.7.1 Array Practice
         //declaring an string, using split to store each word in an array
-        String phrase = "I would not, could not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
+        String phrase = "I would not could not in a box. I would not could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
         String[] wordsFromPhrase = phrase.split("\\.");
 
         System.out.println(Arrays.toString(wordsFromPhrase));
