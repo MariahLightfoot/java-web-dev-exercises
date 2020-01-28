@@ -35,9 +35,7 @@ public class Teacher {
         firstName = aFirstName;
     }
 
-    public void setLastName(String aLastName){
-        lastName = aLastName;
-    }
+    public void setLastName(String aLastName){ lastName = aLastName; }
 
     public void setYearsTeaching(float aYearsTeaching){
         yearsTeaching = aYearsTeaching;

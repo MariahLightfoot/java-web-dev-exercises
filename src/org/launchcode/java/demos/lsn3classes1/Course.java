@@ -22,7 +22,7 @@ public class Course {
         return courseId;
     }
 
-    public HashMap studentEnrolledInCourse(){
+    public HashMap getStudentEnrolledInCourse(){
         return studentEnrolledInCourse;
     }
 
