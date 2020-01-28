@@ -53,15 +53,17 @@ public class Student {
     public String getGradeLevel(){
 
         if(numberOfCredits == 0 && numberOfCredits <= 29){
-            System.out.println(name + " is a Freshman.");
+            return name + " is a Freshman.";
         } else if (numberOfCredits >= 30 && numberOfCredits <= 59){
-            System.out.println(name + " is a Sophomore.");
+            return name + " is a Sophomore.";
         } else if (numberOfCredits >=60 && numberOfCredits <=89){
-            System.out.println(name + " is a Junior.");
+            return name + " is a Junior.";
         } else {
-            System.out.println(name + " is a Senior.");
+            return name + " is a Senior.";
         }
 
     }
+
+
 
 }
