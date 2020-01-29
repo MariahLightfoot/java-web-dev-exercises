@@ -1,5 +1,7 @@
 package org.launchcode.java.demos.lsn3classes1;
 
+import java.util.ArrayList;
+
 public class Student {
 
     private String name;
@@ -64,6 +66,19 @@ public class Student {
 
     }
 
+    public double addGrade(int courseCredits, double grade){
 
+        //what student has now
+        double currentTotalQualityScore = gpa * numberOfCredits;
+
+        //add new courses
+        //for each course take grade * credits
+        double newQualityScore = grade * courseCredits;
+        int totalOfNumberOfCredits = numberOfCredits + courseCredits;
+
+        //calculating new gpa
+        return gpa = (currentTotalQualityScore + newQualityScore)/totalOfNumberOfCredits;
+
+    }
 
 }
