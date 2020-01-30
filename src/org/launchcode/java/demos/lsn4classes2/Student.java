@@ -33,13 +33,13 @@ public class Student {
      public String getGradeLevel(){
 
          if(numberOfCredits == 0 && numberOfCredits <= 29){
-             return name + " is a Freshman.";
+             return "Freshman.";
          } else if (numberOfCredits >= 30 && numberOfCredits <= 59){
-             return name + " is a Sophomore.";
+             return "Sophomore.";
          } else if (numberOfCredits >=60 && numberOfCredits <=89){
-             return name + " is a Junior.";
+             return "Junior.";
          } else {
-             return name + " is a Senior.";
+             return "Senior.";
          }
 
      }
@@ -67,7 +67,8 @@ public class Student {
         return "Name: " + this.name + " " +
                 "Student Id: " + this.studentId + " " +
                 "Number of Credits: " + this.numberOfCredits + " " +
-                "GPA: " + this.gpa;
+                "GPA: " + this.gpa + " " +
+                "Grade Level: " + getGradeLevel();
     }
 
 
