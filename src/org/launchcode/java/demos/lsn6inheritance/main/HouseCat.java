@@ -1,4 +1,4 @@
-package org.launchcode.java.demos.lsn6inheritance;
+package org.launchcode.java.demos.lsn6inheritance.main;
 
 public class HouseCat extends Cat {
     private String name;
@@ -9,13 +9,21 @@ public class HouseCat extends Cat {
         name = aName;
     }
 
+    public HouseCat(String aName){
+        name = aName;
+    }
+
     public boolean isSatisfied() {
         return !isHungry() && !isTired();
     }
 
     @Override
     public String noise() {
-        return "Hello, my name is " + name + "!";
+        if(isSatisfied()){
+            return "Hello, my name is " + name + "!";
+        } else {
+            return super.noise();
+        }
     }
 
     public String purr() {
