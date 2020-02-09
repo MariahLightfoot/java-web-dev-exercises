@@ -7,7 +7,7 @@ public class Computer {
 
     public Computer(String brand, String color, int memory){
         this.brand = brand;
-        this.color = color;
+        this.color = color.toLowerCase();
         this.memory = memory;
     }
 
@@ -23,12 +23,12 @@ public class Computer {
         return memory;
     }
 
-    public void updateColor(String userSelectedColor){
-        this.color = userSelectedColor;
+    public String updateColor(String userSelectedColor){
+        return this.color = userSelectedColor.toLowerCase();
     }
 
-    public void updateMemory(int userSelectedMemory){
-        this.memory = userSelectedMemory;
+    public int updateMemory(int userSelectedMemory){
+       return this.memory = userSelectedMemory;
     }
 
 }
