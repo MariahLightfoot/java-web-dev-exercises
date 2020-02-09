@@ -1,7 +1,5 @@
 package org.launchcode.java.exercises.technology;
 
-import java.util.ArrayList;
-
 public class SmartPhone extends Computer{
     private String cameraQuality;
 

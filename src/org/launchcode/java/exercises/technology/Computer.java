@@ -5,10 +5,10 @@ public class Computer {
     private String color;
     private int memory;
 
-    public Computer(String aBrand, String aColor, int aMemory){
-        aBrand = brand;
-        aColor = color;
-        aMemory = memory;
+    public Computer(String brand, String color, int memory){
+        this.brand = brand;
+        this.color = color;
+        this.memory = memory;
     }
 
     public String getBrand() {
@@ -23,12 +23,12 @@ public class Computer {
         return memory;
     }
 
-    public String updateColor(String userSelectedColor){
-       return this.color = userSelectedColor;
+    public void updateColor(String userSelectedColor){
+        this.color = userSelectedColor;
     }
 
-    public int updateMemory(int userSelectedMemory){
-        return this.memory = userSelectedMemory;
+    public void updateMemory(int userSelectedMemory){
+        this.memory = userSelectedMemory;
     }
 
 }
