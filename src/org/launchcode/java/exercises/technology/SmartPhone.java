@@ -9,11 +9,7 @@ public class SmartPhone extends Computer{
     }
 
     public String getCameraQuality() {
+
         return cameraQuality;
-    }
-
-    public String updateCameraQuality(String userSelectedCameraQuality){
-        return this.cameraQuality = userSelectedCameraQuality;
-
     }
 }

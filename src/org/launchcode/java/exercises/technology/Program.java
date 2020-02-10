@@ -52,14 +52,5 @@ public class Program {
     public void childClassesInheritSuper(){
         assertEquals("The computer's color has been updated to yellow!", laptop.updateColor("yellow"));
     }
-//
-//    @Test
-//    public void canVerifyAndMakeChangesToTouchscreenEntry(){
-//        fail("not implemented");
-//    }
-//
-//    @Test
-//    public void canUpdateCameraQuality(){
-//
-//    }
+
 }

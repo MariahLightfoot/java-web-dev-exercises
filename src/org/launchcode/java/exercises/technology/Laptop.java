@@ -9,6 +9,7 @@ public class Laptop extends Computer{
     }
 
     public boolean getIsTouchscreen(){
+
         return isTouchscreen;
     }
 
