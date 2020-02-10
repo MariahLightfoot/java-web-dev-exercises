@@ -32,12 +32,11 @@ public class Program {
         assertEquals("The computer's color has been updated to " + computer.getColor() + "!", computer.updateColor("yellow"));
     }
 
-//    @Test
-//    public void canUpdateComputerMemory(){
-//        computer.updateMemory(32);
-//        assertEquals(32, computer.getMemory());
-//        System.out.println("The computer now has " + computer.getMemory() + "G of memory!");
-//    }
+    @Test
+    public void canNotifyUserWhenMemoryIsUpdated(){
+        computer.updateMemory(32);
+        assertEquals("The computer now has " + computer.getMemory() + "G of memory!", computer.updateMemory(32));
+    }
 
 //    @Test
 //    public void notifyUserIfColorUpdateIsSameAsOgForComputer(){

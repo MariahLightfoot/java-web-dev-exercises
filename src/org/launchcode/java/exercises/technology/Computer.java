@@ -30,8 +30,9 @@ public class Computer {
         return "The computer's color has been updated to " + userSelectedColor + "!";
     }
 
-    public int updateMemory(int userSelectedMemory){
-       return this.memory = userSelectedMemory;
+    public String updateMemory(int userSelectedMemory){
+        this.memory = userSelectedMemory;
+        return "The computer now has " + userSelectedMemory + "G of memory!";
     }
 
 }
