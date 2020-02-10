@@ -3,9 +3,9 @@ package org.launchcode.java.exercises.technology;
 public class SmartPhone extends Computer{
     private String cameraQuality;
 
-    public SmartPhone(String aBrand, String aColor, int aMemory, String aCameraQuality){
-        super(aBrand, aColor, aMemory);
-        aCameraQuality = cameraQuality;
+    public SmartPhone(String brand, String color, int memory, String cameraQuality){
+        super(brand, color, memory);
+        this.cameraQuality = cameraQuality;
     }
 
     public String getCameraQuality() {

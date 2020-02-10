@@ -1,5 +1,7 @@
 package org.launchcode.java.exercises.technology;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Computer {
     private String brand;
     private String color;
@@ -7,7 +9,7 @@ public class Computer {
 
     public Computer(String brand, String color, int memory){
         this.brand = brand;
-        this.color = color.toLowerCase();
+        this.color = color;
         this.memory = memory;
     }
 
@@ -24,7 +26,8 @@ public class Computer {
     }
 
     public String updateColor(String userSelectedColor){
-        return this.color = userSelectedColor.toLowerCase();
+        this.color = userSelectedColor;
+        return "The computer's color has been updated to " + userSelectedColor + "!";
     }
 
     public int updateMemory(int userSelectedMemory){
