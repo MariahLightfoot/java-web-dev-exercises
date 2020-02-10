@@ -47,13 +47,11 @@ public class Program {
         computer.updateMemory(16);
         assertEquals("The computer already has 16G of memory!", computer.updateMemory(16));
     }
-//
-//    @Test
-//    public void laptopInheritsSuper(){
-//        laptop.updateColor("yellow");
-//        assertEquals("yellow", laptop.getColor());
-//        System.out.println("The laptop is now " + laptop.getColor() + "!");
-//    }
+
+    @Test
+    public void childClassesInheritSuper(){
+        assertEquals("The computer's color has been updated to yellow!", laptop.updateColor("yellow"));
+    }
 //
 //    @Test
 //    public void canVerifyAndMakeChangesToTouchscreenEntry(){
