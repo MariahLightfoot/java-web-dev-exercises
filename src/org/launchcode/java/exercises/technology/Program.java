@@ -25,7 +25,7 @@ public class Program {
         smart_phone = new SmartPhone("Apple", "green", 16, "Good");
     }
 
-    //do not need to test Laptop and SmartPhone because they inherit this method that was verified
+    //do not need to recreate first three test for Laptop and SmartPhone because they inherit these methods that have been verified
     @Test
     public void canNotifyUserWhenColorIsUpdated(){
         computer.updateColor("yellow");
@@ -38,13 +38,12 @@ public class Program {
         assertEquals("The computer now has " + computer.getMemory() + "G of memory!", computer.updateMemory(32));
     }
 
-//    @Test
-//    public void notifyUserIfColorUpdateIsSameAsOgForComputer(){
-//        if(computer.getColor().equals(computer.updateColor("GrEeN"))){
-//            System.out.println("The computer already is " + computer.getColor() + "!");
-//        }
-//    }
-//
+    @Test
+    public void canNotifyUserIfColorUpdateIsSameAsOgCaseInsensitive(){
+        computer.updateColor("GrEeN");
+        assertEquals("The computer already is " + computer.getColor() + "!", computer.updateColor("GrEeN"));
+    }
+
 //    @Test
 //    public void notifyUserIfMemoryUpdateIsSameAsOgForComputer(){
 //        if(computer.getMemory() == computer.updateMemory(16)){

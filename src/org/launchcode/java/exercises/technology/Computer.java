@@ -1,7 +1,5 @@
 package org.launchcode.java.exercises.technology;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Computer {
     private String brand;
     private String color;
@@ -9,7 +7,7 @@ public class Computer {
 
     public Computer(String brand, String color, int memory){
         this.brand = brand;
-        this.color = color;
+        this.color = color.toLowerCase();
         this.memory = memory;
     }
 
@@ -21,13 +19,17 @@ public class Computer {
         return color;
     }
 
-    public int getMemory() {
-        return memory;
-    }
+    public int getMemory() { return memory; }
 
     public String updateColor(String userSelectedColor){
-        this.color = userSelectedColor;
-        return "The computer's color has been updated to " + userSelectedColor + "!";
+        String transformedUserSelectedColor = userSelectedColor.toLowerCase();
+
+        if(getColor().equals(transformedUserSelectedColor)){
+            return "The computer already is " + transformedUserSelectedColor + "!";
+        } else {
+            this.color = userSelectedColor;
+            return "The computer's color has been updated to " + transformedUserSelectedColor + "!";
+        }
     }
 
     public String updateMemory(int userSelectedMemory){
