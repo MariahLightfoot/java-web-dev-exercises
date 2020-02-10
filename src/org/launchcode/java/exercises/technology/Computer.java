@@ -7,7 +7,7 @@ public class Computer {
 
     public Computer(String brand, String color, int memory){
         this.brand = brand;
-        this.color = color.toLowerCase();
+        this.color = color;
         this.memory = memory;
     }
 
@@ -16,7 +16,7 @@ public class Computer {
     }
 
     public String getColor() {
-        return color;
+        return color.toLowerCase();
     }
 
     public int getMemory() { return memory; }
@@ -24,17 +24,23 @@ public class Computer {
     public String updateColor(String userSelectedColor){
         String transformedUserSelectedColor = userSelectedColor.toLowerCase();
 
-        if(getColor().equals(transformedUserSelectedColor)){
-            return "The computer already is " + transformedUserSelectedColor + "!";
-        } else {
+        if(!getColor().equals(transformedUserSelectedColor)){
             this.color = userSelectedColor;
             return "The computer's color has been updated to " + transformedUserSelectedColor + "!";
+        } else {
+            return "The computer already is " + getColor() + "!";
         }
     }
 
     public String updateMemory(int userSelectedMemory){
-        this.memory = userSelectedMemory;
-        return "The computer now has " + userSelectedMemory + "G of memory!";
+
+        if(getMemory() != userSelectedMemory){
+            this.memory = userSelectedMemory;
+            return "The computer now has " + userSelectedMemory + "G of memory!";
+        } else {
+            return "The computer already has " + userSelectedMemory + "G of memory!";
+        }
+
     }
 
 }
