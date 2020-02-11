@@ -1,6 +1,6 @@
-package org.launchcode.java.exercises.technology;
+package org.launchcode.java.exercises.technology.main;
 
-public class Computer {
+public class Computer extends AbstractEntity{
     private String brand;
     private String color;
     private int memory;
@@ -41,6 +41,15 @@ public class Computer {
             return "The computer already has " + userSelectedMemory + "G of memory!";
         }
 
+    }
+
+    @Override
+    public String incrementId(){
+        int id = 100;
+
+        id++;
+
+        return "The object's id is: " + id;
     }
 
 }

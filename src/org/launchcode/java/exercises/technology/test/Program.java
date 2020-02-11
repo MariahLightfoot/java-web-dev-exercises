@@ -1,7 +1,11 @@
-package org.launchcode.java.exercises.technology;
+package org.launchcode.java.exercises.technology.test;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.launchcode.java.exercises.technology.main.Computer;
+import org.launchcode.java.exercises.technology.main.Laptop;
+import org.launchcode.java.exercises.technology.main.SmartPhone;
+
 import static org.junit.Assert.*;
 
 public class Program {
@@ -22,10 +26,10 @@ public class Program {
 
     @Before
     public void createSmartPhoneObject(){
-        smart_phone = new SmartPhone("Apple", "green", 16, "Good");
+        smart_phone = new SmartPhone("Apple", "green", 32, "good");
     }
 
-    //do not need to recreate first three test for Laptop and SmartPhone because they inherit these methods that have been verified
+    //do not need to recreate first four tests for Laptop and SmartPhone because they inherit these methods that have been verified
     @Test
     public void canNotifyUserWhenColorIsUpdated(){
         assertEquals("The computer's color has been updated to yellow!" , computer.updateColor("yellow"));
@@ -51,6 +55,21 @@ public class Program {
     @Test
     public void childClassesInheritSuper(){
         assertEquals("The computer's color has been updated to yellow!", laptop.updateColor("yellow"));
+    }
+
+    @Test
+    public void computerIdIncreasesWhenIncrementIdIsCalled(){
+        assertEquals("The object's id is: 101", computer.incrementId());
+    }
+
+    @Test
+    public void laptopIdIncreasesWhenIncrementIdIsCalled(){
+        assertEquals("The object's id is: 201", laptop.incrementId());
+    }
+
+    @Test
+    public void smartPhoneIdIncreasesWhenIncrementIdIsCalled(){
+        assertEquals("The object's id is: 301", smart_phone.incrementId());
     }
 
 }

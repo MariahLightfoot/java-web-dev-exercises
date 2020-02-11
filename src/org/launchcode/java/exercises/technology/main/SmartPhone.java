@@ -1,4 +1,4 @@
-package org.launchcode.java.exercises.technology;
+package org.launchcode.java.exercises.technology.main;
 
 public class SmartPhone extends Computer{
     private String cameraQuality;
@@ -11,5 +11,14 @@ public class SmartPhone extends Computer{
     public String getCameraQuality() {
 
         return cameraQuality;
+    }
+
+    @Override
+    public String incrementId(){
+        int id = 300;
+
+        id++;
+
+        return "The object's id is: " + id;
     }
 }

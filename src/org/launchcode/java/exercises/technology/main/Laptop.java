@@ -1,4 +1,4 @@
-package org.launchcode.java.exercises.technology;
+package org.launchcode.java.exercises.technology.main;
 
 public class Laptop extends Computer{
     private boolean isTouchscreen;
@@ -11,6 +11,15 @@ public class Laptop extends Computer{
     public boolean getIsTouchscreen(){
 
         return isTouchscreen;
+    }
+
+    @Override
+    public String incrementId(){
+        int id = 200;
+
+        id++;
+
+        return "The object's id is: " + id;
     }
 
 }
