@@ -9,6 +9,7 @@ public class Computer extends AbstractEntity{
         this.brand = brand;
         this.color = color;
         this.memory = memory;
+        this.id = getId();
     }
 
     public String getBrand() {
@@ -18,6 +19,7 @@ public class Computer extends AbstractEntity{
     public String getColor() {
         return color.toLowerCase();
     }
+
 
     public int getMemory() { return memory; }
 
@@ -49,7 +51,13 @@ public class Computer extends AbstractEntity{
 
         id++;
 
+        this.id = id;
+
         return "The object's id is: " + id;
+    }
+
+    public int getId(){
+        return id;
     }
 
 }

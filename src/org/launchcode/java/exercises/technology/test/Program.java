@@ -72,4 +72,22 @@ public class Program {
         assertEquals("The object's id is: 301", smart_phone.incrementId());
     }
 
+    @Test
+    public void idIsSetWhenCallingIncrementIdMethodForComputer(){
+        computer.incrementId();
+        assertEquals(101, computer.getId());
+    }
+
+    @Test
+    public void idIsSetWhenCallingIncrementIdMethodForLaptop(){
+        laptop.incrementId();
+        assertEquals(201, laptop.getId());
+    }
+
+    @Test
+    public void idIsSetWhenCallingIncrementIdMethodForSmartPhone(){
+        smart_phone.incrementId();
+        assertEquals(301, smart_phone.getId());
+    }
+
 }

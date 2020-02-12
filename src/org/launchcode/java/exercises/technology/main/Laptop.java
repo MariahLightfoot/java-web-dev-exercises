@@ -6,6 +6,7 @@ public class Laptop extends Computer{
     public Laptop(String brand, String color, int memory, boolean isTouchscreen){
         super(brand, color, memory);
         this.isTouchscreen = isTouchscreen;
+        this.getId();
     }
 
     public boolean getIsTouchscreen(){
@@ -18,6 +19,8 @@ public class Laptop extends Computer{
         int id = 200;
 
         id++;
+
+        this.id = id;
 
         return "The object's id is: " + id;
     }

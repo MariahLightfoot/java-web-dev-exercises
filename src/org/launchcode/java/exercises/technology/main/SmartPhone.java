@@ -6,6 +6,7 @@ public class SmartPhone extends Computer{
     public SmartPhone(String brand, String color, int memory, String cameraQuality){
         super(brand, color, memory);
         this.cameraQuality = cameraQuality;
+        this.getId();
     }
 
     public String getCameraQuality() {
@@ -18,6 +19,8 @@ public class SmartPhone extends Computer{
         int id = 300;
 
         id++;
+
+        this.id = id;
 
         return "The object's id is: " + id;
     }
